@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Indikator MT4 Wajib untuk Trader Pemula di 2025 | MRG.Family</title>
+  <meta name="description" content="Panduan lengkap 5 indikator MetaTrader 4 terbaik untuk trader pemula: Moving Average, RSI, MACD, Bollinger Bands, dan Stochastic. Pelajari cara membaca sinyal dan kapan menggunakannya." />
+  <meta name="keywords" content="indikator MT4, indikator forex pemula, moving average, RSI forex, MACD trading, bollinger bands, stochastic oscillator, MetaTrader 4" />
+  <link rel="canonical" href="https://yoursite.com/artikel/indikator-mt4-trader-pemula" />
+  <meta property="og:title" content="5 Indikator MT4 Wajib untuk Trader Pemula di 2025" />
+  <meta property="og:description" content="Panduan lengkap 5 indikator MetaTrader 4 terbaik untuk trader pemula. Lengkap dengan cara baca sinyal dan contoh penggunaan." />
+  <meta property="og:type" content="article" />
+  <script type="application/ld+json">{
+    "@context":"https://schema.org","@type":"Article",
+    "headline":"5 Indikator MT4 Wajib untuk Trader Pemula di 2025",
+    "author":{"@type":"Organization","name":"MRG.Family"},
+    "datePublished":"2025-04-15",
+    "description":"Panduan 5 indikator MetaTrader 4 terbaik untuk trader pemula Indonesia."
+  }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink:#0D1117; --ink2:#161C27; --ink3:#1E2736;
+      --teal:#00C9A7; --teal2:#00E5BF; --teal-dim:rgba(0,201,167,.1);
+      --cream:#F5F0E8; --cream2:#EDE7D8; --sand:#D6CDBA;
+      --sage:#3DB87A; --rust:#E05C3A;
+      --text-dark:#1A1614; --text-dark2:#5A5248; --text-dark3:#9A9080;
+      --text-light2:rgba(255,255,255,.65); --text-light3:rgba(255,255,255,.35);
+      --r-sm:6px; --r-md:12px; --r-lg:18px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-dark);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+
+    /* NAV */
+    nav{background:var(--ink);padding:.9rem 5%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:#fff;text-decoration:none}
+    .nav-logo span{color:var(--teal)}
+    .nav-back{font-size:.82rem;color:var(--text-light3);text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:color .2s}
+    .nav-back:hover{color:var(--teal)}
+    .btn-cta{background:var(--teal);color:var(--ink);padding:.45rem 1.1rem;border-radius:var(--r-sm);font-family:'Syne',sans-serif;font-size:.8rem;font-weight:700;text-decoration:none;transition:background .2s}
+    .btn-cta:hover{background:var(--teal2)}
+
+    /* HERO */
+    .art-hero{background:var(--ink);padding:4rem 5% 3rem;color:#fff;position:relative;overflow:hidden}
+    .art-hero::before{content:'';position:absolute;right:-10%;top:-20%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,201,167,.12) 0%,transparent 70%);pointer-events:none}
+    .art-category{display:inline-block;font-family:'Syne',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:rgba(0,201,167,.1);border-radius:999px;padding:.28rem .8rem;margin-bottom:1.25rem}
+    .art-title{font-family:'Instrument Serif',serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-.025em;font-weight:400;margin-bottom:1rem}
+    .art-title em{font-style:italic;color:var(--teal)}
+    .art-meta{display:flex;align-items:center;gap:1.5rem;font-size:.8rem;color:var(--text-light3);margin-bottom:1.5rem;flex-wrap:wrap}
+    .art-meta span{display:flex;align-items:center;gap:.35rem}
+    .art-desc{font-size:1.05rem;color:var(--text-light2);max-width:620px;line-height:1.7;font-weight:300}
+
+    /* CONTENT */
+    .art-wrap{max-width:760px;margin:0 auto;padding:3.5rem 5%}
+    .art-body h2{font-family:'Instrument Serif',serif;font-size:1.75rem;font-weight:400;letter-spacing:-.02em;margin:2.5rem 0 .85rem;color:var(--text-dark);line-height:1.2}
+    .art-body h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin:1.75rem 0 .6rem;color:var(--text-dark)}
+    .art-body p{margin-bottom:1.25rem;color:var(--text-dark2);line-height:1.75}
+    .art-body ul,.art-body ol{margin:1rem 0 1.25rem 1.5rem;color:var(--text-dark2)}
+    .art-body li{margin-bottom:.5rem;line-height:1.65}
+    .art-body strong{color:var(--text-dark);font-weight:600}
+
+    /* CALLOUT BOXES */
+    .callout{border-radius:var(--r-lg);padding:1.5rem 1.75rem;margin:2rem 0}
+    .callout-tip{background:rgba(0,201,167,.08);border:1px solid rgba(0,201,167,.2);border-left:3px solid var(--teal)}
+    .callout-warn{background:rgba(224,92,58,.07);border:1px solid rgba(224,92,58,.18);border-left:3px solid var(--rust)}
+    .callout-info{background:rgba(61,184,122,.07);border:1px solid rgba(61,184,122,.18);border-left:3px solid var(--sage)}
+    .callout-title{font-family:'Syne',sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
+    .callout-tip .callout-title{color:#0A8C74}
+    .callout-warn .callout-title{color:var(--rust)}
+    .callout-info .callout-title{color:var(--sage)}
+    .callout p{margin-bottom:0;font-size:.9rem}
+
+    /* INDICATOR CARD */
+    .ind-card{background:#fff;border:1px solid var(--sand);border-radius:var(--r-lg);padding:1.75rem;margin:1.75rem 0;position:relative;overflow:hidden}
+    .ind-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--teal2))}
+    .ind-num{position:absolute;top:1.25rem;right:1.5rem;font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:rgba(0,201,167,.08);line-height:1}
+    .ind-name{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text-dark);margin-bottom:.3rem}
+    .ind-full{font-size:.82rem;color:var(--text-dark3);margin-bottom:1rem}
+    .ind-specs{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+    .ind-spec{background:var(--cream2);border-radius:var(--r-sm);padding:.3rem .75rem;font-size:.75rem;font-weight:600;color:var(--text-dark2)}
+    .ind-card p{font-size:.9rem;color:var(--text-dark2);margin-bottom:.85rem}
+    .ind-card p:last-child{margin-bottom:0}
+    .ind-signal{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .sig-buy{background:rgba(61,184,122,.1);color:#1a6b40;border:1px solid rgba(61,184,122,.25);border-radius:var(--r-sm);padding:.28rem .75rem;font-size:.75rem;font-weight:700;font-family:'Syne',sans-serif}
+    .sig-sell{background:rgba(224,92,58,.08);color:#a03020;border:1px solid rgba(224,92,58,.2);border-radius:var(--r-sm);padding:.28rem .75rem;font-size:.75rem;font-weight:700;font-family:'Syne',sans-serif}
+
+    /* COMPARISON TABLE */
+    .tbl-wrap{overflow-x:auto;margin:1.75rem 0;border-radius:var(--r-lg);border:1px solid var(--sand)}
+    table{width:100%;border-collapse:collapse;font-size:.875rem}
+    thead{background:var(--ink)}
+    thead th{padding:.85rem 1rem;text-align:left;color:#fff;font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    tbody tr:nth-child(even){background:var(--cream2)}
+    tbody td{padding:.8rem 1rem;color:var(--text-dark2);border-bottom:1px solid var(--sand)}
+    tbody tr:last-child td{border-bottom:none}
+    .td-good{color:#1a6b40;font-weight:600}
+    .td-mid{color:#8a6010;font-weight:600}
+
+    /* CTA BANNER */
+    .cta-banner{background:var(--ink);border-radius:var(--r-lg);padding:2rem 2.5rem;margin:3rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+    .cta-banner h3{font-family:'Instrument Serif',serif;font-size:1.4rem;font-weight:400;color:#fff;margin-bottom:.35rem}
+    .cta-banner p{font-size:.875rem;color:var(--text-light3);margin:0}
+    .btn-banner{background:var(--teal);color:var(--ink);padding:.8rem 1.75rem;border-radius:var(--r-sm);font-family:'Syne',sans-serif;font-size:.875rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:background .2s}
+    .btn-banner:hover{background:var(--teal2)}
+
+    /* AUTHOR & TAGS */
+    .art-footer{border-top:1px solid var(--sand);padding-top:2rem;margin-top:3rem}
+    .art-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+    .tag{background:var(--cream2);border:1px solid var(--sand);border-radius:999px;padding:.28rem .85rem;font-size:.75rem;color:var(--text-dark3);font-weight:500}
+    .art-nav{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:1.5rem}
+    .art-nav a{font-size:.85rem;font-weight:600;color:var(--text-dark);text-decoration:none;display:flex;align-items:center;gap:.35rem;transition:color .2s}
+    .art-nav a:hover{color:#0A8C74}
+
+    /* PROGRESS BAR */
+    .reading-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--teal2));z-index:200;transition:width .1s linear;width:0}
+
+    @media(max-width:700px){
+      .art-hero{padding:2.5rem 5% 2rem}
+      .art-wrap{padding:2rem 5%}
+      .cta-banner{flex-direction:column}
+      nav .btn-cta{display:none}
+    }
+  </style>
+</head>
+<body>
+
+<div class="reading-bar" id="readBar"></div>
+
+<nav>
+  <a href="../index.html" class="nav-logo">MRG<span>.</span>Family</a>
+  <a href="../index.html" class="nav-back">← Kembali ke Beranda</a>
+  <a href="https://account.tradersfamily.id/aff/18499/" target="_blank" class="btn-cta">Daftar MRG →</a>
+</nav>
+
+<header class="art-hero">
+  <div class="art-category">📊 Analisis Teknikal</div>
+  <h1 class="art-title">5 Indikator MT4 Wajib untuk<br><em>Trader Pemula</em> di 2025</h1>
+  <div class="art-meta">
+    <span>📅 15 April 2025</span>
+    <span>⏱ 8 menit baca</span>
+    <span>👁 Analisis Teknikal · MetaTrader 4</span>
+  </div>
+  <p class="art-desc">Panduan lengkap 5 indikator paling powerful di MetaTrader 4 — cara membaca sinyal, kapan menggunakannya, dan kesalahan umum yang harus dihindari trader pemula.</p>
+</header>
+
+<main class="art-wrap">
+  <article class="art-body">
+
+    <p>Salah satu pertanyaan paling sering muncul dari trader pemula adalah: <strong>"Indikator apa yang sebaiknya saya pakai?"</strong> Jawabannya bukan soal jumlah indikator yang dipasang di chart, tapi soal memahami fungsi masing-masing dan cara menggunakannya secara tepat.</p>
+
+    <p>MetaTrader 4 (MT4) — platform trading resmi yang digunakan oleh broker MRG Mega Berjangka — menyediakan ratusan indikator bawaan. Tapi sebagai pemula, kamu tidak perlu semua. Lima indikator di bawah ini sudah lebih dari cukup untuk membangun sistem trading yang solid.</p>
+
+    <div class="callout callout-tip">
+      <div class="callout-title">💡 Tips Sebelum Mulai</div>
+      <p>Jangan pasang lebih dari 3 indikator sekaligus di satu chart. Terlalu banyak indikator justru membingungkan dan menyebabkan <em>analysis paralysis</em> — kondisi di mana kamu tidak bisa mengambil keputusan karena terlalu banyak sinyal yang saling bertentangan.</p>
+    </div>
+
+    <h2>1. Moving Average (MA)</h2>
+
+    <div class="ind-card">
+      <div class="ind-num">01</div>
+      <div class="ind-name">Moving Average</div>
+      <div class="ind-full">Rata-rata harga bergerak dalam periode tertentu</div>
+      <div class="ind-specs">
+        <span class="ind-spec">📍 Trend Following</span>
+        <span class="ind-spec">🎯 Akurasi: Tinggi pada trending market</span>
+        <span class="ind-spec">⚙️ Setting: MA 20, 50, 200</span>
+      </div>
+      <p>Moving Average adalah indikator paling fundamental dalam trading forex. Ia menghitung rata-rata harga penutupan dalam periode tertentu dan menampilkannya sebagai garis di atas chart. Fungsi utamanya adalah <strong>mengidentifikasi arah tren</strong> dan <strong>menentukan area support/resistance dinamis</strong>.</p>
+      <p>Ada dua jenis yang paling sering digunakan: <strong>Simple Moving Average (SMA)</strong> yang menghitung rata-rata sederhana, dan <strong>Exponential Moving Average (EMA)</strong> yang memberikan bobot lebih besar pada harga terbaru sehingga lebih responsif terhadap pergerakan harga.</p>
+      <h3>Cara Membaca Sinyal</h3>
+      <p><strong>Golden Cross:</strong> Ketika MA periode pendek (misalnya EMA 20) memotong ke atas MA periode panjang (EMA 50) → sinyal beli.<br><strong>Death Cross:</strong> Ketika MA periode pendek memotong ke bawah MA periode panjang → sinyal jual.<br><strong>Harga di atas MA 200:</strong> Tren jangka panjang sedang bullish (naik).</p>
+      <div class="ind-signal">
+        <span class="sig-buy">📈 BUY: Harga di atas EMA 20 + EMA 20 &gt; EMA 50</span>
+        <span class="sig-sell">📉 SELL: Harga di bawah EMA 20 + EMA 20 &lt; EMA 50</span>
+      </div>
+    </div>
+
+    <h2>2. Relative Strength Index (RSI)</h2>
+
+    <div class="ind-card">
+      <div class="ind-num">02</div>
+      <div class="ind-name">RSI</div>
+      <div class="ind-full">Relative Strength Index — Momentum Oscillator</div>
+      <div class="ind-specs">
+        <span class="ind-spec">📍 Overbought/Oversold</span>
+        <span class="ind-spec">🎯 Akurasi: Tinggi pada ranging market</span>
+        <span class="ind-spec">⚙️ Setting: Period 14, Level 70/30</span>
+      </div>
+      <p>RSI adalah indikator momentum yang mengukur <strong>kekuatan dan kecepatan pergerakan harga</strong> dalam skala 0–100. Indikator ini sangat berguna untuk mengetahui apakah suatu aset sudah terlalu mahal (<em>overbought</em>) atau terlalu murah (<em>oversold</em>) secara teknikal.</p>
+      <p>RSI digunakan di hampir semua pair forex yang tersedia di MRG — mulai dari EUR/USD, GBP/USD, hingga XAU/USD (Gold).</p>
+      <h3>Cara Membaca Sinyal</h3>
+      <p><strong>RSI &gt; 70:</strong> Area overbought — harga berpotensi turun/koreksi. Pertimbangkan posisi sell atau tunggu konfirmasi.<br><strong>RSI &lt; 30:</strong> Area oversold — harga berpotensi naik/rebound. Pertimbangkan posisi buy atau tunggu konfirmasi.<br><strong>RSI = 50:</strong> Area netral — tidak ada tekanan beli atau jual yang dominan.</p>
+      <div class="callout callout-warn">
+        <div class="callout-title">⚠️ Jangan Salah Paham</div>
+        <p>RSI di atas 70 bukan berarti harus langsung sell. Dalam tren naik yang kuat, RSI bisa bertahan di zona overbought dalam waktu lama. Selalu konfirmasi dengan indikator lain sebelum membuka posisi.</p>
+      </div>
+      <div class="ind-signal">
+        <span class="sig-buy">📈 BUY: RSI &lt; 30 + mulai naik kembali ke atas 30</span>
+        <span class="sig-sell">📉 SELL: RSI &gt; 70 + mulai turun kembali ke bawah 70</span>
+      </div>
+    </div>
+
+    <h2>3. MACD</h2>
+
+    <div class="ind-card">
+      <div class="ind-num">03</div>
+      <div class="ind-name">MACD</div>
+      <div class="ind-full">Moving Average Convergence Divergence</div>
+      <div class="ind-specs">
+        <span class="ind-spec">📍 Trend + Momentum</span>
+        <span class="ind-spec">🎯 Akurasi: Tinggi pada breakout</span>
+        <span class="ind-spec">⚙️ Setting: 12, 26, 9 (default)</span>
+      </div>
+      <p>MACD menggabungkan dua EMA berbeda (12 dan 26 periode) untuk menghasilkan satu garis MACD, kemudian membandingkannya dengan garis sinyal (EMA 9). Histogram di bawah chart menunjukkan selisih antara keduanya. MACD sangat efektif untuk <strong>mengkonfirmasi kekuatan tren</strong> dan mendeteksi <strong>momentum pembalikan</strong>.</p>
+      <h3>Cara Membaca Sinyal</h3>
+      <p><strong>MACD crossing ke atas signal line:</strong> Sinyal bullish — momentum beli menguat.<br><strong>MACD crossing ke bawah signal line:</strong> Sinyal bearish — momentum jual menguat.<br><strong>Histogram semakin panjang ke atas:</strong> Tren naik semakin kuat.<br><strong>Divergence:</strong> Harga naik tapi MACD turun → potensi pembalikan arah (bearish divergence).</p>
+      <div class="ind-signal">
+        <span class="sig-buy">📈 BUY: MACD cross ke atas signal line + histogram positif</span>
+        <span class="sig-sell">📉 SELL: MACD cross ke bawah signal line + histogram negatif</span>
+      </div>
+    </div>
+
+    <h2>4. Bollinger Bands</h2>
+
+    <div class="ind-card">
+      <div class="ind-num">04</div>
+      <div class="ind-name">Bollinger Bands</div>
+      <div class="ind-full">Pita Volatilitas berbasis Standard Deviation</div>
+      <div class="ind-specs">
+        <span class="ind-spec">📍 Volatilitas</span>
+        <span class="ind-spec">🎯 Akurasi: Baik pada sideways market</span>
+        <span class="ind-spec">⚙️ Setting: Period 20, Dev 2.0</span>
+      </div>
+      <p>Bollinger Bands terdiri dari tiga garis: <strong>middle band</strong> (SMA 20), <strong>upper band</strong> (SMA 20 + 2 standar deviasi), dan <strong>lower band</strong> (SMA 20 − 2 standar deviasi). Ketika pita menyempit (<em>squeeze</em>), itu tanda volatilitas rendah dan biasanya diikuti pergerakan harga yang eksplosif.</p>
+      <h3>Cara Membaca Sinyal</h3>
+      <p><strong>Harga menyentuh upper band:</strong> Harga di area overbought secara statistik — pertimbangkan sell.<br><strong>Harga menyentuh lower band:</strong> Harga di area oversold — pertimbangkan buy.<br><strong>Bollinger Squeeze:</strong> Pita sangat sempit → bersiap untuk breakout besar.<br><strong>Harga keluar dari pita (breakout):</strong> Konfirmasi momentum kuat ke arah tersebut.</p>
+      <div class="ind-signal">
+        <span class="sig-buy">📈 BUY: Harga bounce dari lower band + volume meningkat</span>
+        <span class="sig-sell">📉 SELL: Harga bounce dari upper band + momentum melemah</span>
+      </div>
+    </div>
+
+    <h2>5. Stochastic Oscillator</h2>
+
+    <div class="ind-card">
+      <div class="ind-num">05</div>
+      <div class="ind-name">Stochastic Oscillator</div>
+      <div class="ind-full">Perbandingan harga penutupan dengan range harga periode tertentu</div>
+      <div class="ind-specs">
+        <span class="ind-spec">📍 Overbought/Oversold</span>
+        <span class="ind-spec">🎯 Akurasi: Tinggi dikombinasi MA</span>
+        <span class="ind-spec">⚙️ Setting: 5,3,3 atau 14,3,3</span>
+      </div>
+      <p>Mirip dengan RSI, Stochastic Oscillator mengukur momentum harga dalam skala 0–100. Bedanya, Stochastic lebih <strong>sensitif dan cepat bereaksi</strong> terhadap perubahan harga sehingga cocok untuk timeframe rendah (M15, H1). Indikator ini terdiri dari dua garis: %K (garis cepat) dan %D (garis lambat).</p>
+      <h3>Cara Membaca Sinyal</h3>
+      <p><strong>%K crossing ke atas %D di zona &lt; 20:</strong> Sinyal buy yang kuat.<br><strong>%K crossing ke bawah %D di zona &gt; 80:</strong> Sinyal sell yang kuat.<br><strong>Stochastic di atas 80:</strong> Overbought → harga berpotensi koreksi.<br><strong>Stochastic di bawah 20:</strong> Oversold → harga berpotensi rebound.</p>
+      <div class="ind-signal">
+        <span class="sig-buy">📈 BUY: %K cross %D dari bawah di zona &lt;20</span>
+        <span class="sig-sell">📉 SELL: %K cross %D dari atas di zona &gt;80</span>
+      </div>
+    </div>
+
+    <h2>Perbandingan 5 Indikator</h2>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Indikator</th>
+            <th>Fungsi Utama</th>
+            <th>Terbaik Untuk</th>
+            <th>Kelemahan</th>
+            <th>Timeframe</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Moving Average</strong></td>
+            <td>Identifikasi tren</td>
+            <td class="td-good">Trending market</td>
+            <td>Lagging (terlambat)</td>
+            <td>H4, D1</td>
+          </tr>
+          <tr>
+            <td><strong>RSI</strong></td>
+            <td>Overbought/Oversold</td>
+            <td class="td-good">Ranging market</td>
+            <td>False signal di tren kuat</td>
+            <td>H1, H4</td>
+          </tr>
+          <tr>
+            <td><strong>MACD</strong></td>
+            <td>Momentum + tren</td>
+            <td class="td-good">Breakout, konfirmasi</td>
+            <td>Lambat di sideways</td>
+            <td>H1, H4, D1</td>
+          </tr>
+          <tr>
+            <td><strong>Bollinger Bands</strong></td>
+            <td>Volatilitas</td>
+            <td class="td-good">Sideways, squeeze</td>
+            <td>Kurang efektif di tren kuat</td>
+            <td>M15, H1</td>
+          </tr>
+          <tr>
+            <td><strong>Stochastic</strong></td>
+            <td>Momentum cepat</td>
+            <td class="td-good">Scalping, entry timing</td>
+            <td>Terlalu banyak false signal</td>
+            <td>M5, M15, H1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Kombinasi Indikator yang Terbukti Efektif</h2>
+
+    <p>Jangan gunakan semua indikator sekaligus. Pilih kombinasi yang saling melengkapi:</p>
+
+    <div class="callout callout-info">
+      <div class="callout-title">✅ Kombinasi 1 — Trend Following</div>
+      <p><strong>EMA 20 + EMA 50 + MACD</strong><br>Gunakan EMA untuk identifikasi tren, MACD untuk konfirmasi momentum. Entry saat ada golden cross yang dikonfirmasi MACD positif.</p>
+    </div>
+
+    <div class="callout callout-info">
+      <div class="callout-title">✅ Kombinasi 2 — Reversal Trading</div>
+      <p><strong>Bollinger Bands + RSI + Stochastic</strong><br>Tunggu harga menyentuh lower band, konfirmasi RSI di bawah 30, dan Stochastic mulai cross ke atas. Entry pada konfirmasi ketiga indikator.</p>
+    </div>
+
+    <div class="callout callout-tip">
+      <div class="callout-title">💡 Strategi Simple untuk Pemula</div>
+      <p>Mulai dengan hanya <strong>EMA 20 + RSI</strong>. Sederhana, tapi sudah cukup untuk memfilter trade yang berkualitas. Kuasai dua indikator ini secara mendalam sebelum menambah yang lain.</p>
+    </div>
+
+    <h2>Cara Memasang Indikator di MT4 MRG</h2>
+    <ol>
+      <li>Buka platform MetaTrader 4 dari akun MRG kamu</li>
+      <li>Klik menu <strong>Insert</strong> di toolbar atas</li>
+      <li>Pilih <strong>Indicators → Trend</strong> untuk MA/Bollinger Bands, atau <strong>Oscillators</strong> untuk RSI/MACD/Stochastic</li>
+      <li>Klik nama indikator yang ingin dipasang</li>
+      <li>Sesuaikan parameter sesuai rekomendasi di atas</li>
+      <li>Klik OK — indikator akan muncul di chart</li>
+    </ol>
+
+    <div class="cta-banner">
+      <div>
+        <h3>Praktikkan Langsung di Akun Demo MRG</h3>
+        <p>Coba semua indikator ini tanpa risiko di akun demo MRG. Setelah siap, upgrade ke akun real dengan modal mulai $300.</p>
+      </div>
+      <a href="https://account.tradersfamily.id/aff/18499/" target="_blank" class="btn-banner">Daftar Akun MRG →</a>
+    </div>
+
+    <div class="art-footer">
+      <div class="art-tags">
+        <span class="tag">Indikator MT4</span>
+        <span class="tag">Moving Average</span>
+        <span class="tag">RSI</span>
+        <span class="tag">MACD</span>
+        <span class="tag">Bollinger Bands</span>
+        <span class="tag">Stochastic</span>
+        <span class="tag">Trader Pemula</span>
+        <span class="tag">Analisis Teknikal</span>
+      </div>
+      <div class="art-nav">
+        <span></span>
+        <a href="artikel-2-position-sizing.html">Artikel Selanjutnya: Cara Hitung Lot → </a>
+      </div>
+    </div>
+
+  </article>
+</main>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const pct = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
+    document.getElementById('readBar').style.width = pct + '%';
+  });
+</script>
+</body>
+</html>

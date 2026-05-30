@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cara Menghitung Ukuran Lot yang Tepat Agar Modal Aman | MRG.Family</title>
+  <meta name="description" content="Panduan lengkap cara menghitung position sizing dan ukuran lot forex yang tepat. Formula praktis berbasis persentase risiko per trade untuk melindungi modal dari drawdown besar." />
+  <meta name="keywords" content="cara hitung lot forex, position sizing, ukuran lot trading, manajemen risiko forex, risk per trade, stop loss forex, trading Indonesia" />
+  <link rel="canonical" href="https://yoursite.com/artikel/cara-hitung-lot-position-sizing" />
+  <meta property="og:title" content="Cara Menghitung Ukuran Lot yang Tepat Agar Modal Aman" />
+  <meta property="og:type" content="article" />
+  <script type="application/ld+json">{
+    "@context":"https://schema.org","@type":"Article",
+    "headline":"Cara Menghitung Ukuran Lot yang Tepat Agar Modal Aman",
+    "author":{"@type":"Organization","name":"MRG.Family"},
+    "datePublished":"2025-04-08"
+  }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ink:#0D1117;--ink2:#161C27;--ink3:#1E2736;--teal:#00C9A7;--teal2:#00E5BF;--teal-dim:rgba(0,201,167,.1);--cream:#F5F0E8;--cream2:#EDE7D8;--sand:#D6CDBA;--sage:#3DB87A;--rust:#E05C3A;--text-dark:#1A1614;--text-dark2:#5A5248;--text-dark3:#9A9080;--text-light2:rgba(255,255,255,.65);--text-light3:rgba(255,255,255,.35);--r-sm:6px;--r-md:12px;--r-lg:18px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-dark);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    nav{background:var(--ink);padding:.9rem 5%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:#fff;text-decoration:none}
+    .nav-logo span{color:var(--teal)}
+    .nav-back{font-size:.82rem;color:var(--text-light3);text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:color .2s}
+    .nav-back:hover{color:var(--teal)}
+    .btn-cta{background:var(--teal);color:var(--ink);padding:.45rem 1.1rem;border-radius:var(--r-sm);font-family:'Syne',sans-serif;font-size:.8rem;font-weight:700;text-decoration:none;transition:background .2s}
+    .btn-cta:hover{background:var(--teal2)}
+    .art-hero{background:var(--ink);padding:4rem 5% 3rem;color:#fff;position:relative;overflow:hidden}
+    .art-hero::before{content:'';position:absolute;right:-10%;top:-20%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(61,184,122,.1) 0%,transparent 70%);pointer-events:none}
+    .art-category{display:inline-block;font-family:'Syne',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:rgba(0,201,167,.1);border-radius:999px;padding:.28rem .8rem;margin-bottom:1.25rem}
+    .art-title{font-family:'Instrument Serif',serif;font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-.025em;font-weight:400;margin-bottom:1rem}
+    .art-title em{font-style:italic;color:var(--teal)}
+    .art-meta{display:flex;align-items:center;gap:1.5rem;font-size:.8rem;color:var(--text-light3);margin-bottom:1.5rem;flex-wrap:wrap}
+    .art-desc{font-size:1.05rem;color:var(--text-light2);max-width:620px;line-height:1.7;font-weight:300}
+    .art-wrap{max-width:760px;margin:0 auto;padding:3.5rem 5%}
+    .art-body h2{font-family:'Instrument Serif',serif;font-size:1.75rem;font-weight:400;letter-spacing:-.02em;margin:2.5rem 0 .85rem;color:var(--text-dark);line-height:1.2}
+    .art-body h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin:1.75rem 0 .6rem;color:var(--text-dark)}
+    .art-body p{margin-bottom:1.25rem;color:var(--text-dark2);line-height:1.75}
+    .art-body ul,.art-body ol{margin:1rem 0 1.25rem 1.5rem;color:var(--text-dark2)}
+    .art-body li{margin-bottom:.5rem;line-height:1.65}
+    .art-body strong{color:var(--text-dark);font-weight:600}
+    .callout{border-radius:var(--r-lg);padding:1.5rem 1.75rem;margin:2rem 0}
+    .callout-tip{background:rgba(0,201,167,.08);border:1px solid rgba(0,201,167,.2);border-left:3px solid var(--teal)}
+    .callout-warn{background:rgba(224,92,58,.07);border:1px solid rgba(224,92,58,.18);border-left:3px solid var(--rust)}
+    .callout-info{background:rgba(61,184,122,.07);border:1px solid rgba(61,184,122,.18);border-left:3px solid var(--sage)}
+    .callout-title{font-family:'Syne',sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
+    .callout-tip .callout-title{color:#0A8C74}
+    .callout-warn .callout-title{color:var(--rust)}
+    .callout-info .callout-title{color:var(--sage)}
+    .callout p{margin-bottom:0;font-size:.9rem}
+
+    /* FORMULA BOX */
+    .formula{background:var(--ink);border-radius:var(--r-lg);padding:1.75rem 2rem;margin:2rem 0;color:#fff;position:relative;overflow:hidden}
+    .formula::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--teal2))}
+    .formula-label{font-family:'Syne',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.85rem}
+    .formula-eq{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:#fff;line-height:1.5;margin-bottom:.85rem}
+    .formula-eq .var{color:var(--teal)}
+    .formula p{font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:.4rem}
+    .formula p:last-child{margin-bottom:0}
+
+    /* EXAMPLE BOX */
+    .example{background:#fff;border:1px solid var(--sand);border-radius:var(--r-lg);padding:1.75rem;margin:1.75rem 0}
+    .example-title{font-family:'Syne',sans-serif;font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#0A8C74;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+    .example-step{display:flex;gap:1rem;align-items:flex-start;margin-bottom:.85rem;padding-bottom:.85rem;border-bottom:1px solid var(--cream2)}
+    .example-step:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .step-num{width:28px;height:28px;border-radius:50%;background:var(--teal);color:var(--ink);font-family:'Syne',sans-serif;font-size:.75rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
+    .step-content strong{display:block;font-size:.88rem;font-weight:600;color:var(--text-dark);margin-bottom:.2rem}
+    .step-content span{font-size:.85rem;color:var(--text-dark2)}
+    .step-result{background:var(--cream2);border-radius:var(--r-sm);padding:.4rem .85rem;margin-top:.5rem;font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;color:#0A8C74;display:inline-block}
+
+    /* RISK TABLE */
+    .tbl-wrap{overflow-x:auto;margin:1.75rem 0;border-radius:var(--r-lg);border:1px solid var(--sand)}
+    table{width:100%;border-collapse:collapse;font-size:.875rem}
+    thead{background:var(--ink)}
+    thead th{padding:.85rem 1rem;text-align:left;color:#fff;font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    tbody tr:nth-child(even){background:var(--cream2)}
+    tbody td{padding:.8rem 1rem;color:var(--text-dark2);border-bottom:1px solid var(--sand)}
+    tbody tr:last-child td{border-bottom:none}
+    .td-good{color:#1a6b40;font-weight:600}
+    .td-mid{color:#8a6010;font-weight:600}
+    .td-bad{color:#a03020;font-weight:600}
+
+    /* INTERACTIVE CALC */
+    .mini-calc{background:#fff;border:1px solid var(--sand);border-radius:var(--r-lg);padding:1.75rem;margin:2rem 0}
+    .mini-calc-title{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:800;color:var(--text-dark);margin-bottom:1.25rem;display:flex;align-items:center;gap:.5rem}
+    .mc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem}
+    .mc-field label{font-family:'Syne',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text-dark3);display:block;margin-bottom:.35rem}
+    .mc-field input{width:100%;background:var(--cream2);border:1.5px solid var(--sand);border-radius:var(--r-sm);padding:.65rem .9rem;font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--text-dark);outline:none;transition:border-color .2s}
+    .mc-field input:focus{border-color:#0A8C74}
+    .mc-btn{width:100%;background:var(--ink);color:var(--teal);border:none;border-radius:var(--r-sm);padding:.85rem;font-family:'Syne',sans-serif;font-size:.88rem;font-weight:800;letter-spacing:.02em;transition:background .2s}
+    .mc-btn:hover{background:#1E2736}
+    .mc-result{margin-top:1.25rem;background:var(--ink);border-radius:var(--r-md);padding:1.25rem 1.5rem;display:none}
+    .mc-result.show{display:block}
+    .mc-result-val{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--teal);letter-spacing:-.02em}
+    .mc-result-label{font-size:.8rem;color:rgba(255,255,255,.45);margin-top:.25rem}
+    .mc-result-risk{font-size:.82rem;color:rgba(255,255,255,.4);margin-top:.5rem}
+
+    .cta-banner{background:var(--ink);border-radius:var(--r-lg);padding:2rem 2.5rem;margin:3rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+    .cta-banner h3{font-family:'Instrument Serif',serif;font-size:1.4rem;font-weight:400;color:#fff;margin-bottom:.35rem}
+    .cta-banner p{font-size:.875rem;color:var(--text-light3);margin:0}
+    .btn-banner{background:var(--teal);color:var(--ink);padding:.8rem 1.75rem;border-radius:var(--r-sm);font-family:'Syne',sans-serif;font-size:.875rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:background .2s}
+    .btn-banner:hover{background:var(--teal2)}
+    .art-footer{border-top:1px solid var(--sand);padding-top:2rem;margin-top:3rem}
+    .art-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+    .tag{background:var(--cream2);border:1px solid var(--sand);border-radius:999px;padding:.28rem .85rem;font-size:.75rem;color:var(--text-dark3);font-weight:500}
+    .art-nav{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:1.5rem}
+    .art-nav a{font-size:.85rem;font-weight:600;color:var(--text-dark);text-decoration:none;display:flex;align-items:center;gap:.35rem;transition:color .2s}
+    .art-nav a:hover{color:#0A8C74}
+    .reading-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--teal2));z-index:200;transition:width .1s linear;width:0}
+    @media(max-width:700px){.art-hero{padding:2.5rem 5% 2rem}.art-wrap{padding:2rem 5%}.mc-grid{grid-template-columns:1fr}.cta-banner{flex-direction:column}nav .btn-cta{display:none}}
+  </style>
+</head>
+<body>
+<div class="reading-bar" id="readBar"></div>
+<nav>
+  <a href="../index.html" class="nav-logo">MRG<span>.</span>Family</a>
+  <a href="../index.html" class="nav-back">← Kembali ke Beranda</a>
+  <a href="https://account.tradersfamily.id/aff/18499/" target="_blank" class="btn-cta">Daftar MRG →</a>
+</nav>
+
+<header class="art-hero">
+  <div class="art-category">🛡️ Manajemen Risiko</div>
+  <h1 class="art-title">Cara Menghitung <em>Ukuran Lot</em><br>yang Tepat Agar Modal Aman</h1>
+  <div class="art-meta">
+    <span>📅 8 April 2025</span>
+    <span>⏱ 7 menit baca</span>
+    <span>👁 Manajemen Risiko · Position Sizing</span>
+  </div>
+  <p class="art-desc">Formula praktis position sizing berdasarkan persentase risiko per trade. Dilengkapi kalkulator interaktif dan contoh nyata menggunakan akun MRG Mega Berjangka.</p>
+</header>
+
+<main class="art-wrap">
+  <article class="art-body">
+
+    <p>Banyak trader pemula yang fokus mencari strategi entry terbaik, tapi mengabaikan pertanyaan yang jauh lebih penting: <strong>berapa lot yang sebaiknya dibuka?</strong> Kesalahan dalam menentukan ukuran lot adalah penyebab nomor satu trader kehilangan modal dalam waktu singkat — bukan karena strategi yang salah, tapi karena <em>position sizing</em> yang keliru.</p>
+
+    <p>Artikel ini akan mengajarkan kamu formula sederhana yang digunakan oleh trader profesional untuk menentukan ukuran lot yang tepat, sehingga <strong>satu trade yang rugi tidak akan membunuh akun kamu</strong>.</p>
+
+    <div class="callout callout-warn">
+      <div class="callout-title">⚠️ Fakta Mengejutkan</div>
+      <p>Sebagian besar trader yang bangkrut bukan karena strategi yang salah — melainkan karena menggunakan lot yang terlalu besar. Bahkan sistem trading dengan win rate 40% bisa menguntungkan jika position sizing-nya benar.</p>
+    </div>
+
+    <h2>Apa Itu Position Sizing?</h2>
+
+    <p><em>Position sizing</em> adalah proses menentukan <strong>berapa besar modal yang dialokasikan untuk satu trade</strong>, dinyatakan dalam satuan lot. Tujuannya sederhana: memastikan bahwa jika trade tersebut rugi (hit stop loss), kerugian maksimal tidak melebihi batas risiko yang sudah kamu tetapkan.</p>
+
+    <p>Prinsip dasarnya adalah: <strong>risiko per trade = persentase tetap dari total modal</strong>. Trader profesional umumnya menggunakan 1–2% per trade. Artinya, jika modal kamu $1.000, maksimal kerugian per trade adalah $10–$20.</p>
+
+    <h2>Formula Position Sizing</h2>
+
+    <div class="formula">
+      <div class="formula-label">📐 Formula Utama</div>
+      <div class="formula-eq">
+        Ukuran Lot = <span class="var">Risiko ($)</span> ÷ (<span class="var">Stop Loss (pip)</span> × <span class="var">Nilai Pip per Lot</span>)
+      </div>
+      <p>Risiko ($) = Modal Total × Persentase Risiko</p>
+      <p>Nilai Pip per Lot: EUR/USD = $10, Gold (XAU/USD) = $1, USD/JPY ≈ $9.2</p>
+    </div>
+
+    <h2>Contoh Perhitungan Nyata</h2>
+    <p>Mari kita praktikkan dengan skenario nyata menggunakan akun Silver MRG (modal $300):</p>
+
+    <div class="example">
+      <div class="example-title">📋 Contoh: Trading EUR/USD dengan Akun Silver MRG</div>
+      <div class="example-step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Tentukan modal dan risiko per trade</strong>
+          <span>Modal: $300 · Risiko: 1% per trade</span>
+          <div class="step-result">Risiko = $300 × 1% = $3.00</div>
+        </div>
+      </div>
+      <div class="example-step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Tentukan stop loss berdasarkan analisis chart</strong>
+          <span>Misalnya, stop loss kamu di 20 pip dari harga entry</span>
+          <div class="step-result">SL = 20 pip</div>
+        </div>
+      </div>
+      <div class="example-step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>Hitung nilai pip per lot untuk EUR/USD</strong>
+          <span>Nilai pip EUR/USD = $10 per lot standard</span>
+          <div class="step-result">Nilai Pip = $10/lot</div>
+        </div>
+      </div>
+      <div class="example-step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <strong>Hitung ukuran lot yang tepat</strong>
+          <span>Lot = $3.00 ÷ (20 pip × $10) = $3 ÷ $200</span>
+          <div class="step-result">✅ Ukuran Lot = 0.015 lot → Gunakan 0.01 lot (min. di akun Silver)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-tip">
+      <div class="callout-title">💡 Catatan Akun Silver MRG</div>
+      <p>Akun Silver MRG memiliki minimum lot 0.1, jadi dengan modal $300 dan risiko 1%, kamu perlu SL yang lebih lebar atau naikkan risiko ke 2%. Akun Silver paling ideal dimulai dengan modal $500–$1.000 untuk position sizing yang lebih fleksibel.</p>
+    </div>
+
+    <h2>Kalkulator Position Sizing Interaktif</h2>
+    <p>Gunakan kalkulator di bawah ini untuk menghitung lot yang tepat sesuai modal dan setup trading kamu:</p>
+
+    <div class="mini-calc">
+      <div class="mini-calc-title">⚡ Hitung Ukuran Lot</div>
+      <div class="mc-grid">
+        <div class="mc-field">
+          <label>Modal Akun (USD)</label>
+          <input type="number" id="mc_bal" value="1000" placeholder="1000" />
+        </div>
+        <div class="mc-field">
+          <label>Risiko per Trade (%)</label>
+          <input type="number" id="mc_risk" value="1" step="0.1" placeholder="1" />
+        </div>
+        <div class="mc-field">
+          <label>Stop Loss (pip)</label>
+          <input type="number" id="mc_sl" value="20" placeholder="20" />
+        </div>
+        <div class="mc-field">
+          <label>Nilai Pip per Lot ($)</label>
+          <input type="number" id="mc_pip" value="10" step="0.1" placeholder="10" />
+        </div>
+      </div>
+      <button class="mc-btn" onclick="calcLot()">⚡ Hitung Lot Sekarang</button>
+      <div class="mc-result" id="mcRes">
+        <div class="mc-result-val" id="mcLot">—</div>
+        <div class="mc-result-label">Ukuran Lot yang Disarankan</div>
+        <div class="mc-result-risk" id="mcDetail">—</div>
+      </div>
+    </div>
+
+    <h2>Tabel Risiko per Trade vs Ketahanan Akun</h2>
+    <p>Berikut perbandingan berapa kali kamu bisa rugi berturut-turut sebelum akun terkuras habis, tergantung persentase risiko yang digunakan:</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Risiko per Trade</th><th>Modal Awal</th><th>Setelah 10x Loss</th><th>Setelah 20x Loss</th><th>Ketahanan</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>1%</strong></td><td>$1.000</td><td>$904</td><td>$818</td><td class="td-good">Sangat Aman ✓</td></tr>
+          <tr><td><strong>2%</strong></td><td>$1.000</td><td>$817</td><td>$668</td><td class="td-good">Aman ✓</td></tr>
+          <tr><td><strong>5%</strong></td><td>$1.000</td><td>$599</td><td>$358</td><td class="td-mid">Berisiko ⚠</td></tr>
+          <tr><td><strong>10%</strong></td><td>$1.000</td><td>$349</td><td>$122</td><td class="td-bad">Berbahaya ✗</td></tr>
+          <tr><td><strong>25%</strong></td><td>$1.000</td><td>$56</td><td>$3</td><td class="td-bad">Fatal ✗</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Aturan Position Sizing yang Wajib Dipatuhi</h2>
+
+    <div class="callout callout-info">
+      <div class="callout-title">✅ Aturan 1 — 1-2% Rule</div>
+      <p>Jangan pernah risiko lebih dari <strong>1–2% modal per trade</strong>. Ini adalah standar manajemen risiko yang digunakan oleh hampir semua trader profesional di dunia.</p>
+    </div>
+
+    <div class="callout callout-info">
+      <div class="callout-title">✅ Aturan 2 — Tentukan SL Dulu, Baru Hitung Lot</div>
+      <p>Jangan pernah tentukan lot terlebih dahulu kemudian menyesuaikan stop loss. Selalu tentukan <strong>stop loss berdasarkan analisis teknikal</strong>, baru hitung lot dari sana.</p>
+    </div>
+
+    <div class="callout callout-info">
+      <div class="callout-title">✅ Aturan 3 — Konsisten di Setiap Trade</div>
+      <p>Gunakan persentase risiko yang <strong>sama di setiap trade</strong>, terlepas dari seberapa yakin kamu dengan setup-nya. Overconfidence adalah musuh terbesar trader.</p>
+    </div>
+
+    <div class="callout callout-warn">
+      <div class="callout-title">⚠️ Hindari Ini</div>
+      <p>Jangan menambah ukuran lot setelah rugi berturut-turut (revenge trading) dengan harapan cepat balik modal. Ini adalah jebakan yang paling sering membunuh akun trader pemula.</p>
+    </div>
+
+    <h2>Position Sizing untuk Setiap Akun MRG</h2>
+    <p>Berikut panduan praktis position sizing berdasarkan tipe akun di MRG Mega Berjangka:</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Akun MRG</th><th>Min. Deposit</th><th>Risiko 1%</th><th>SL 20 pip</th><th>Lot Ideal</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Silver</strong></td><td>$300</td><td>$3</td><td>20 pip</td><td class="td-mid">0.01 lot (min 0.1)</td></tr>
+          <tr><td><strong>Silver</strong></td><td>$500</td><td>$5</td><td>20 pip</td><td class="td-mid">0.02 lot</td></tr>
+          <tr><td><strong>Gold</strong></td><td>$500</td><td>$5</td><td>20 pip</td><td class="td-good">0.02 lot</td></tr>
+          <tr><td><strong>Gold</strong></td><td>$1.000</td><td>$10</td><td>20 pip</td><td class="td-good">0.05 lot</td></tr>
+          <tr><td><strong>Platinum</strong></td><td>$5.000</td><td>$50</td><td>20 pip</td><td class="td-good">0.25 lot</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Kesimpulan</h2>
+    <p>Position sizing bukan bagian yang glamor dari trading, tapi ini adalah <strong>fondasi yang menentukan apakah kamu bisa bertahan</strong> di pasar dalam jangka panjang. Trader yang konsisten menerapkan 1–2% rule akan jauh lebih sulit bangkrut dibanding trader yang trading dengan feeling.</p>
+    <p>Mulai terapkan formula ini di setiap trade, gunakan kalkulator di atas, dan kombinasikan dengan strategi entry yang solid. Selebihnya adalah soal konsistensi dan disiplin.</p>
+
+    <div class="cta-banner">
+      <div>
+        <h3>Praktikkan di Akun Demo MRG Dulu</h3>
+        <p>Latih position sizing di akun demo sebelum masuk ke akun real. Daftar sekarang via link afiliasi kami.</p>
+      </div>
+      <a href="https://account.tradersfamily.id/aff/18499/" target="_blank" class="btn-banner">Daftar Akun MRG →</a>
+    </div>
+
+    <div class="art-footer">
+      <div class="art-tags">
+        <span class="tag">Position Sizing</span>
+        <span class="tag">Ukuran Lot</span>
+        <span class="tag">Manajemen Risiko</span>
+        <span class="tag">Stop Loss</span>
+        <span class="tag">Risk Management</span>
+        <span class="tag">MRG Mega Berjangka</span>
+      </div>
+      <div class="art-nav">
+        <a href="artikel-1-indikator-mt4.html">← 5 Indikator MT4 Pemula</a>
+        <a href="artikel-3-psikologi-trading.html">Psikologi Trading →</a>
+      </div>
+    </div>
+  </article>
+</main>
+
+<script>
+  window.addEventListener('scroll',()=>{
+    const d=document.documentElement;
+    document.getElementById('readBar').style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%';
+  });
+  function calcLot(){
+    const bal=parseFloat(document.getElementById('mc_bal').value)||1000;
+    const risk=parseFloat(document.getElementById('mc_risk').value)||1;
+    const sl=parseFloat(document.getElementById('mc_sl').value)||20;
+    const pip=parseFloat(document.getElementById('mc_pip').value)||10;
+    const riskUsd=bal*(risk/100);
+    const lot=riskUsd/(sl*pip);
+    const lotRound=Math.floor(lot*100)/100;
+    document.getElementById('mcLot').textContent=lotRound.toFixed(2)+' lot';
+    document.getElementById('mcDetail').textContent=`Risiko: $${riskUsd.toFixed(2)} · SL ${sl} pip · Kerugian maks: $${(lotRound*sl*pip).toFixed(2)}`;
+    const r=document.getElementById('mcRes');
+    r.style.display='block'; r.classList.add('show');
+  }
+</script>
+</body>
+</html>
